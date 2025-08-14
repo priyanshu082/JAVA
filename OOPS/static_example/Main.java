@@ -1,5 +1,4 @@
 package OOPS.static_example;
-import OOPS.static_example.Human;
 
 
 public class Main {
@@ -7,12 +6,15 @@ public class Main {
         // Static variables are shared by all instances of a class
         Human kunal=new Human(32,10000,"Kunal",false);
         Human rahul=new Human(12,100000,"Rahul",true);
+        
+        //in that human class static variable is shared by both the objects
+        //we have initialized the static variable 
         System.out.println(Human.population);
 
         //for using anything in static class we need to use static word before the method
         b=10;
 
-        //to call nons static we in the last need a static method
+        //to call non static method in the last we need a static method
         Main jj = new Main();
         jj.greeting();
     }

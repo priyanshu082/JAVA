@@ -14,7 +14,7 @@ public class staticBlock {
         }
 
         public static void main(String[] args) {
-            staticBlock  obj= new staticBlock();
+            staticBlock obj= new staticBlock();
             System.out.println(staticBlock.a+ " " + staticBlock.b);
 
             staticBlock.b+=3;
