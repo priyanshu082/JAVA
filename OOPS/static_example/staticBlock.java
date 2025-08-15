@@ -1,26 +1,24 @@
 package OOPS.static_example;
 
 public class staticBlock {
-        static int a=4;
-        static int b;
+        static int a = 4; // static variable, shared by all instances
+        static int b;     // static variable, will be initialized in static block
 
-        //now we want to initalize our static variables
-        //we do this using static block
-        // it will only be called once when first object is created
-
-        static{
+        // Static block to initialize static variables
+        // This block runs only once, when the class is loaded
+        static {
             System.out.println("I am in static block");
-            b=a*5;
+            b = a * 5;
         }
 
         public static void main(String[] args) {
-            staticBlock obj= new staticBlock();
-            System.out.println(staticBlock.a+ " " + staticBlock.b);
+            staticBlock obj;
+            obj = new staticBlock(); // creating first object, static block already executed
+            System.out.println(staticBlock.a + " " + staticBlock.b); // prints values of static variables
 
-            staticBlock.b+=3;
+            staticBlock.b += 3; // modify static variable b
 
-            staticBlock  obj2= new staticBlock();
-            System.out.println(staticBlock.a+ " " + staticBlock.b);
-
+            staticBlock obj2 = new staticBlock(); // creating second object, static block will NOT execute again
+            System.out.println(staticBlock.a + " " + staticBlock.b); // prints updated values of static variables
         }
 }
