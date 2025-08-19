@@ -129,6 +129,11 @@ package OOPS.inheritance;
 public class BoxWeight extends Box {
     double weight;
 
+    public BoxWeight(){
+        System.out.println("BoxWeight Created");
+    }
+
+   
     // Constructor that sets weight, but sets inherited dimensions to -1
     public BoxWeight(double weight) {
         // Calls the default constructor of Box (super()), which sets l, w, h to -1
