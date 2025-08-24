@@ -3,10 +3,10 @@ package OOPS._3_polymorphism;
 public class Main {
 public static void main(String[] args) {
     Shape shape= new Shape();
-    Shape circle= new Circle();
-    Square square= new Square();
-    Triangle triangle= new Triangle();
-    Shape triangle2= new Triangle();
+    Shape circle= new Circle(5.0);
+    Square square= new Square(4.0);
+    Triangle triangle= new Triangle(3.0, 4.0);
+    Shape triangle2= new Triangle(6.0, 8.0);
 
     shape.area();
     circle.area();

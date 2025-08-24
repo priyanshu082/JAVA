@@ -8,7 +8,7 @@ public class Main {
 
         // In the Human class, the static variable is shared by both objects
         // We have initialized the static variable 
-        System.out.println(Human.population);
+        System.out.println(Human.getPopulation());
 
         // For using anything static in a class, we need to use the static keyword before the method or variable
         b = 10;

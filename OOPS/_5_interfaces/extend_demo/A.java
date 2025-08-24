@@ -1,4 +1,4 @@
-package OOPS.interfaces.extend_demo;
+package OOPS._5_interfaces.extend_demo;
 
 public interface A {
     //static methods cant be overirdden so we need have to body here for that

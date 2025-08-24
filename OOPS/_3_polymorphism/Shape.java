@@ -1,20 +1,12 @@
 package OOPS._3_polymorphism;
 
-/*
-    toString() Method in Java
-    -------------------------
-    - Every class in Java inherits the toString() method from the Object class.
-    - By default, toString() returns a string that includes the class name and hashcode.
-    - Overriding toString() allows you to provide a custom string representation for your objects.
-    - In this code, toString() is overridden to return the class name of the object using getClass().getName().
-*/
-
 public class Shape {
-    void area(){
+    public void area() {
         System.out.println("I am in shapes");
     }
 
-    public String toString(){
+    @Override
+    public String toString() {
         return getClass().getName();
     }
 
@@ -36,11 +28,11 @@ public class Shape {
             }
     */
 
-    final void display(){
+    public final void display() {
         System.out.println("I am in shape");
     }
 
-    static void static_method() {
+    public static void static_method() {
         System.out.println("This is a static method in Shape.");
     }
 }
