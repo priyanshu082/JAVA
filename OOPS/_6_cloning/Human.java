@@ -21,7 +21,27 @@ public class Human implements Cloneable {
         this.arr = other.arr;
     }
 
-    public Object clone() throws CloneNotSupportedException{
-        return super.clone();
+    //for making the deep copy
+    // public Object clone() throws CloneNotSupportedException{
+    //     return super.clone();
+    // }
+
+    //for making the shallow copy
+    public Object clone() throws CloneNotSupportedException {
+        Human cloned = (Human) super.clone();
+        // Deep copy the arr array
+        if (this.arr != null) {
+            cloned.arr = new Human[this.arr.length];
+            for (int i = 0; i < this.arr.length; i++) {
+                if (this.arr[i] != null) {
+                    cloned.arr[i] = (Human) this.arr[i].clone();
+                } else {
+                    cloned.arr[i] = null;
+                }
+            }
+        }
+        return cloned;
     }
+
+
 }
