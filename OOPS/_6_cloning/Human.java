@@ -31,8 +31,9 @@ public class Human implements Cloneable {
         Human cloned = (Human) super.clone();
         // Deep copy the arr array
         if (this.arr != null) {
-            cloned.arr = new Human[this.arr.length];
-            for (int i = 0; i < this.arr.length; i++) {
+            int n=this.arr.length;
+            cloned.arr = new Human[n];
+            for (int i = 0; i < n; i++) {
                 if (this.arr[i] != null) {
                     cloned.arr[i] = (Human) this.arr[i].clone();
                 } else {
