@@ -23,8 +23,8 @@ public static void main(String[] args) {
     // Note: Static methods are not overridden, they are hidden.
     // The method called depends on the reference type, not the object type.
     // Both of these will call Triangle.static_method() because the reference is Triangle.
-    triangle.static_method();
-    triangle2.static_method(); // Even though triangle2 is of type Shape, static methods are resolved at compile time based on reference type.
+    Shape.static_method();
+    Triangle.static_method(); // Even though triangle2 is of type Shape, static methods are resolved at compile time based on reference type.
 }
 }
 
