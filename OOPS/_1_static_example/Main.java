@@ -5,10 +5,12 @@ public class Main {
         // Static variables are shared by all instances of a class
         Human kunal = new Human(32, 10000, "Kunal", false);
         Human rahul = new Human(12, 100000, "Rahul", true);
+        kunal.getAge();
+        rahul.getAge();
 
         // In the Human class, the static variable is shared by both objects
         // We have initialized the static variable 
-        System.out.println(Human.getPopulation());
+         System.out.println(Human.getPopulation()); //output :2 
 
         // For using anything static in a class, we need to use the static keyword before the method or variable
         b = 10;
